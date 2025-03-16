@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Driveways Inc.</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/main.js"defer></script>
+    <!-- FontAwesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+<!-- fade in animation css start -->
+
+<style>
+
+/* Fade-in from bottom */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state before scrolling */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* When the section is in view */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+</style>
+
+
+ <!-- fade in animation css end -->
+
+
+</head>
+
+<body>
+    <!-- header start -->
+
+</head>
+
+<body>
+<!-- header start -->
+<header class="header">
+    <!-- Logo Container (Left) -->
+    <div class="logo">Concrete Driveways Inc.</div>
+
+    <!-- Navigation Container (Centered) -->
+    <nav class="nav-container">
+        <ul class="nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Info (Right) -->
+    <div class="contact-info">
+        <p>123 Main Street, Mansfield, TX</p>
+        <p>(123) 456-7890</p>
+    </div>
+
+    <!-- Mobile Menu Toggle (Hidden on Desktop) -->
+    <div class="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+
+    
+    
+
+    <!-- header end -->
+
+
+    
+
+
+
+    <!-- contact start -->
+    <section class="concrete-section fade-in">
+        <div class="container">
+            <div class="concrete-content">
+                <h2>🛠️ Concrete Installation & Repair</h2>
+                <p>
+                    <strong>Durable, Long-Lasting Solutions for Your Property</strong>
+                </p>
+                
+                <hr>
+                <br>
+                <p>
+                    Concrete is a <strong>versatile, durable, and cost-effective</strong> material widely used in residential, commercial, and civil projects. From <strong>new driveways, sidewalks, and patios</strong> to <strong>repairing existing concrete surfaces</strong>, our expert team ensures <strong>precision, strength, and longevity</strong> in every project.
+                </p>
+                <br>
+                <hr>
+                
+    
+                <h3>✅ Why Choose Concrete?</h3>
+                <ul>
+                    <li><strong>Durability:</strong> Withstands heavy traffic and weather conditions</li>
+                    <li><strong>Low Maintenance:</strong> Minimal upkeep for long-term performance</li>
+                    <li><strong>Customizable:</strong> Stamped, stained, or polished finishes available</li>
+                    <li><strong>Cost-Effective:</strong> A long-term investment that adds value</li>
+                </ul>
+                <br>
+                <hr>
+    
+                <h3>🔹 Concrete Repair Services</h3>
+                <p>Over time, concrete may <strong>crack, chip, or settle</strong> due to weather, moisture, or shifting ground. Our team specializes in:</p>
+                <ul>
+                    <li><strong>Crack Repair:</strong> Sealing and filling cracks to prevent further damage</li>
+                    <li><strong>Resurfacing:</strong> Renewing worn-out surfaces for a fresh look</li>
+                    <li><strong>Leveling & Lifting:</strong> Fixing uneven or sunken slabs</li>
+                    <li><strong>Structural Reinforcement:</strong> Strengthening older concrete to extend its lifespan</li>
+                    <br>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+<!-- Contact Section start -->
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+
+        <!-- Message container for JavaScript -->
+        <div id="message-box"></div>
+
+        <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+    <!-- contact us end -->
+
+
+    <!-- contact end -->
+    
+
+    <footer class="footer">
+        <div class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-content">
+            <!-- Business Name - Left -->
+            <div class="footer-logo">
+                <h3>Concrete Driveways Inc.</h3>
+            </div>
+    
+            <!-- Business Hours - Center -->
+            <div class="footer-hours">
+                <p><strong>Hours</strong></p>
+                <p>Mon - Fri: 6AM–5PM</p>
+                <p>Sat: 8AM–3PM</p>
+                <p>Sun: Depends</p>
+            </div>
+    
+            <!-- Contact Information - Right -->
+            <div class="footer-contact">
+                <p><strong>📍 Address:</strong> 123 Main Street, Mansfield, TX</p>
+                <p><strong>📞 Phone:</strong> (123) 456-7890</p>
+                <p><strong>📧 Email:</strong> info@concrete.com</p>
+            </div>
+        </div>
+    
+        <p class="footer-copy">&copy; 2025 Concrete Driveways Inc. | All Rights Reserved.</p>
+    </footer>
+    <!-- footer end  -->
+    
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+        
+            let formData = new FormData(this);
+        
+            fetch("form.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json()) // Parse JSON response
+            .then(data => {
+                let messageBox = document.getElementById("message-box");
+                if (data.status === "success") {
+                    messageBox.innerHTML = `<p class="success-message">✅ ${data.message}</p>`;
+                    messageBox.style.color = "green";
+                    document.getElementById("contact-form").reset(); // Clear form on success
+                } else {
+                    messageBox.innerHTML = `<p class="error-message">❌ ${data.message}</p>`;
+                    messageBox.style.color = "red";
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+        </script>
+        
+ 
+
+
+
+
+</body>
+</html>

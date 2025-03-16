@@ -1,0 +1,730 @@
+/* Nav bar heading start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EEEEEE;
+}
+
+/* Header styling */
+/* Base Header Styling */
+/* Ensure everything stays on one row */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8E1616;
+    color: white;
+    padding: 20px 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo (Left) */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 20px;
+    flex: 1; /* Allows flexible space for better alignment */
+    text-align: left;
+}
+
+/* Navbar Container (Centered) */
+.nav-container {
+    flex: 2; /* Increases space to keep it centered */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Navbar Items */
+.nav li {
+    display: inline-block;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+/* Contact Info (Right) */
+.contact-info {
+    flex: 1; /* Takes up remaining space to keep everything aligned */
+    text-align: right;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+/* Mobile Menu Toggle (Right, Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .nav-container {
+        display: none; /* Hide nav for mobile */
+    }
+
+    .contact-info {
+        display: none; /* Hide contact info on mobile */
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+    }
+}
+
+
+/* Hamburger Lines */
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        text-align: center;
+        max-width: 100%;
+        padding: 5px 0;
+        white-space: normal;
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        display: none; /* Hides contact info on mobile */
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        flex-direction: column;
+    }
+
+
+    @media (max-width: 768px) {
+        .nav {
+            flex-direction: column !important; /* Switch to column on mobile */
+            align-items: center; /* Center the links in mobile view */
+            gap: 15px; /* Add spacing between links */
+        }
+    }
+    
+}
+
+    /* Hide the nav container initially */
+   
+    
+
+    /* Show menu when active */
+    .nav-container.active {
+        display: flex !important;
+        flex-direction: row;
+        padding: 1
+        0px 0;
+    }
+
+    .nav {
+        flex-direction:row;
+        padding: -10px 0;
+    }
+
+    .nav li {
+        margin: -10px 0;
+    }
+
+    .nav li a {
+        padding: 12px 15px;
+        font-size: 20px;
+        display: block;
+    }
+}
+
+/* force nav link start  */
+
+@media (min-width: 769px) {
+    .nav {
+        flex-direction: row !important; /* Force row layout on desktop */
+    }
+}
+
+
+/* force nav end  */
+
+
+
+/* 🛠 Fix: Remove White Space Under Header */
+.carousel {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    margin-top: 60px; /* Adjust margin to align with navbar */
+}
+
+/* Image Wrapper */
+.carousel-images {
+    display: flex;
+    width: 300vw;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.carousel-slide {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image */
+.carousel-slide img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Text Styling */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+
+.carousel-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carousel-text p {
+    font-size: 1.5rem;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots Indicator */
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        height: 70vh;
+    }
+
+    .carousel-text h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-text p {
+        font-size: 1rem;
+    }
+}
+
+/* carousell end */
+
+
+/* button css start */
+/* Contact Us Button */
+/* Adjust Text Positioning */
+.carousel-text {
+    position: absolute;
+    top: 50%; /* Moves the text lower */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+
+/* Contact Us Button */
+.contact-btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 30px; /* Rounded shape */
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    max-width: 200px; /* Ensures the button doesn't stretch */
+    width: auto; /* Keeps button width based on content */
+}
+
+
+/* Button Hover Effect */
+.contact-btn:hover {
+    background: white;
+    color: black;
+}
+
+
+/* button css end */
+
+/* about us start */
+/* About Section */
+/* About Section */
+.about-section {
+    background-color: #EEEEEE;
+    padding: 80px 0;
+    text-align: center;
+    color: #8E1616;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #8E1616;
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8E1616;
+    margin-top: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Contact Us Button */
+.contact-btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid #8E1616;
+    border-radius: 30px;
+    text-decoration: none;
+    background: #8E1616;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+    background: #EEEEEE;
+    color: #8E1616;
+}
+
+/* about us end */
+
+/* contact us start */
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-screen height */
+    background-color: #EEEEEE;
+}
+
+.contact-container {
+    border: 2px solid #8E1616; /* Adds a border around the entire box */
+    padding: 20px; /* Adds spacing inside the border */
+    border-radius: 10px; /* Optional: Rounds the corners */
+    background-color: #fff; /* Ensures background remains white */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    max-width: 400px; /* Ensures it remains compact */
+    margin: 0 auto; /* Centers it */
+}
+
+
+/* Contact Form Container */
+.contact-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px; /* Soft corners */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px; /* Ensures a square form */
+    height: 400px; /* Fixed height for perfect square */
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Contact Form Title */
+.contact-container h2 {
+    font-size: 24px;
+    color: #8E1616;
+    margin-bottom: 15px;
+}
+
+/* Contact Form Inputs */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #8E1616;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Contact Form Textarea */
+.contact-form textarea {
+    height: 80px; /* Smaller for compact look */
+    resize: none;
+}
+
+/* Contact Form Button */
+.contact-btn {
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    background: #8E1616;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* Button Hover Effect */
+.contact-btn:hover {
+    background: white;
+    color: #8E1616;
+    border: 2px solid #8E1616;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-container {
+        width: 90%;
+        padding: 30px;
+        height: auto; /* Allows it to shrink on smaller screens */
+    }
+}
+
+/* contact us end */
+
+/* contact page css start */
+.concrete-section {
+    background-color: #EEEEEE;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.concrete-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.concrete-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #8E1616;
+    margin-bottom: 20px;
+    text-decoration: underline;
+
+}
+
+.concrete-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+}
+
+.concrete-content p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.concrete-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.concrete-content ul li {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 20px;
+    position: relative;
+}
+
+.concrete-content ul li::before {
+    content: "✔";
+    color: #8E1616;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* contact page css end  */
+
+/* contact  css php start */
+
+/* Success & Error Messages */
+.success-message, .error-message {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+
+/* contact css end */
+
+/* project page css */
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-item img {
+    display: block;
+    border: 5px solid #721c24; /* Border applied directly to the image */
+    border-radius: 0px; /* Remove this if you don’t want rounded corners */
+    width: auto; /* Keeps the original image size */
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
+/* project end css */
+
+/* footer start css */
+/* Footer Styling */
+.footer {
+    background-color: #721c24;
+    color: #fff;
+    padding: 5px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* NAVIGATION - Stays at the Top */
+.footer-nav {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* MAIN FOOTER CONTENT - Properly Centered */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Ensures left, center, right alignment */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents stacking on desktop */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+/* Business Name - Left */
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+/* Business Hours - Centered */
+.footer-hours {
+    flex: 1;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Contact Information - Right */
+.footer-contact {
+    flex: 1;
+    text-align: right;
+    font-size: 12px;
+}
+
+/* Copyright - Stays Centered */
+.footer-copy {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stacks elements on small screens */
+        text-align: center;
+    }
+
+    .footer-logo, .footer-hours, .footer-contact {
+        text-align: center;
+        flex: none;
+        width: 100%;
+    }
+}
+
+
+/* footer end */
